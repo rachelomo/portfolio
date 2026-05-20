@@ -5,6 +5,8 @@ import HeroRight from "./HeroRight"
 import ScrollBadge from "./ScrollBadge"
 import SideIndicator from "./SideIndicator"
 
+  
+
 const Hero = () => {
   return (
     <section

@@ -69,9 +69,10 @@ const HeroLeft = () => {
         transition={{ delay: 0.35 }}
         className="
           mt-7
-          font-semibold
+         
           tracking-[-0.055em]
-          leading-[0.92]
+          font-medium
+              leading-[1.25]
           text-white
           text-[2.7rem]
           sm:text-[2rem]

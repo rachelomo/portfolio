@@ -178,8 +178,8 @@ const About = () => {
             mt-6
             text-5xl
             md:text-7xl
-            font-bold
-            leading-tight
+            font-medium
+              leading-[1.25]
             max-w-4xl
               text-[2.2rem]
           sm:text-[1.6rem]

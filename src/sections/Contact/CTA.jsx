@@ -27,7 +27,8 @@ export default function CTA() {
         <div className="relative z-10 max-w-[480px]">
           <p
             className="
-              text-[10px]
+                text-[10px]
+          sm:text-[11px]
               tracking-[0.25em]
               text-[#8B7DB8]
               uppercase
@@ -42,9 +43,10 @@ export default function CTA() {
               text-white
               font-medium
               leading-[1.25]
-              text-[1.7rem]
-              sm:text-[2rem]
-              md:text-[2.3rem]
+              text-[2.2rem]
+          sm:text-[1.6rem]
+          md:text-[1.9rem]
+          lg:text-[1.9rem]
             "
           >
             Have a project in mind?

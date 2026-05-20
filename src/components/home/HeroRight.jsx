@@ -1,10 +1,4 @@
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-} from "framer-motion"
-
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { useEffect } from "react"
 
 import laptop from "../../assets/home/hero-laptop.png"
@@ -13,22 +7,14 @@ import planet from "../../assets/home/planet-removebg.png"
 import orb from "../../assets/home/orb-removebg.png"
 
 const HeroRight = () => {
-  // ================= PARALLAX =================
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
-  const smoothX = useSpring(mouseX, {
-    stiffness: 35,
-    damping: 30,
-  })
-
-  const smoothY = useSpring(mouseY, {
-    stiffness: 35,
-    damping: 30,
-  })
+  const smoothX = useSpring(mouseX, { stiffness: 35, damping: 30 })
+  const smoothY = useSpring(mouseY, { stiffness: 35, damping: 30 })
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       const x = e.clientX / window.innerWidth - 0.5
       const y = e.clientY / window.innerHeight - 0.5
 
@@ -37,13 +23,9 @@ const HeroRight = () => {
     }
 
     window.addEventListener("mousemove", handleMouseMove)
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
+    return () => window.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
-  // ================= DEPTH =================
   const planetX = useTransform(smoothX, [-0.5, 0.5], [-15, 15])
   const planetY = useTransform(smoothY, [-0.5, 0.5], [-15, 15])
 
@@ -58,54 +40,39 @@ const HeroRight = () => {
       className="
         relative
         w-full
-
         flex
         items-center
         justify-center
+        overflow-visible
 
-        overflow-hidden
-
-        h-[320px]
-        sm:h-[430px]
-        md:h-[520px]
+        h-[340px]
+        sm:h-[480px]
+        md:h-[560px]
         lg:h-[760px]
       "
     >
-      {/* ================= PLANET ================= */}
+      {/* ================= SOFT BACKGROUND GLOW ================= */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-[220px] h-[220px] sm:w-[340px] sm:h-[340px] lg:w-[680px] lg:h-[680px] rounded-full bg-purple-600/20 blur-[90px] lg:blur-[140px]" />
+      </div>
+
+      {/* ================= PLANET (HIDDEN ON VERY SMALL SCREENS) ================= */}
       <motion.img
         src={planet}
-        style={{
-          x: planetX,
-          y: planetY,
-        }}
-        initial={{
-          opacity: 0,
-          scale: 1.2,
-        }}
-        animate={{
-          opacity: 0.45,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.8,
-        }}
+        style={{ x: planetX, y: planetY }}
+        initial={{ opacity: 0, scale: 1.2 }}
+        animate={{ opacity: 0.4, scale: 1 }}
+        transition={{ duration: 1.8 }}
         className="
+          hidden sm:block
           absolute
-
-          top-[5%]
-
+          top-[0%]
           left-1/2
           -translate-x-1/2
 
-          lg:left-auto
-          lg:right-[-10%]
-          lg:translate-x-0
+          lg:left-auto lg:right-[-10%] lg:translate-x-0
 
-          w-[180px]
-          sm:w-[260px]
-          md:w-[340px]
-          lg:w-[680px]
-
+          w-[180px] sm:w-[260px] md:w-[340px] lg:w-[680px]
           mix-blend-screen
           pointer-events-none
         "
@@ -114,174 +81,90 @@ const HeroRight = () => {
       {/* ================= ORB ================= */}
       <motion.img
         src={orb}
-        style={{
-          x: orbX,
-          y: orbY,
-        }}
-        animate={{
-          y: [0, -8, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        style={{ x: orbX, y: orbY }}
+        animate={{ y: [0, -6, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
         className="
           absolute
-
-          top-[8%]
-
+          top-[6%]
           left-1/2
           -translate-x-1/2
 
-          lg:left-auto
-          lg:right-[8%]
-          lg:translate-x-0
+          lg:left-auto lg:right-[8%] lg:translate-x-0
 
-          w-[120px]
-          sm:w-[170px]
-          md:w-[230px]
-          lg:w-[430px]
-
-          opacity-90
+          w-[90px] sm:w-[140px] md:w-[200px] lg:w-[430px]
+          opacity-80 sm:opacity-90
           mix-blend-screen
           pointer-events-none
         "
       />
 
-      {/* ================= GLOW ================= */}
-      <div
-        className="
-          absolute
-
-          left-1/2
-          -translate-x-1/2
-
-          w-[180px]
-          h-[180px]
-
-          sm:w-[260px]
-          sm:h-[260px]
-
-          md:w-[360px]
-          md:h-[360px]
-
-          lg:w-[680px]
-          lg:h-[680px]
-
-          rounded-full
-
-          blur-[80px]
-          lg:blur-[140px]
-        "
-      />
-
-      {/* ================= LAPTOP ================= */}
+      {/* ================= LAPTOP (MAIN FOCUS) ================= */}
       <motion.div
-        style={{
-          x: laptopX,
-          y: laptopY,
-        }}
-        initial={{
-          opacity: 0,
-          y: 40,
-          rotate: -4,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          rotate: -2,
-        }}
-        transition={{
-          duration: 1.2,
-          ease: [0.22, 1, 0.36, 1],
-        }}
+        style={{ x: laptopX, y: laptopY }}
+        initial={{ opacity: 0, y: 25, rotate: -2 }}
+        animate={{ opacity: 1, y: 0, rotate: 0 }}
+        transition={{ duration: 1.2 }}
         className="
           relative
           z-30
-
           flex
           items-center
           justify-center
-
           w-full
         "
       >
         <motion.img
           src={laptop}
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        className="
-  w-full
-  object-contain
+          animate={{ y: [0, -5, 0] }}
+          transition={{ duration: 5, repeat: Infinity }}
+          className="
+            w-full
+            object-contain
 
-  max-w-[340px]
-  sm:max-w-[500px]
-  md:max-w-[680px]
-  lg:max-w-[980px]
-  xl:max-w-[1100px]
+            max-w-[260px]
+            sm:max-w-[420px]
+            md:max-w-[580px]
+            lg:max-w-[980px]
+            xl:max-w-[1100px]
 
-  scale-[1.08]
-  sm:scale-[1.12]
-  lg:scale-[1.05]
+            scale-[1.05]
+            sm:scale-[1.1]
 
-  drop-shadow-[0_35px_120px_rgba(0,0,0,0.95)]
-"
+            drop-shadow-[0_25px_80px_rgba(0,0,0,0.85)]
+          "
         />
       </motion.div>
 
-      {/* ================= FLOATING CARD ================= */}
+      {/* ================= FLOATING CARD (FIXED MOBILE POSITION) ================= */}
       <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.8,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          y: [0, -8, 0],
-        }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
         transition={{
-          opacity: {
-            duration: 1,
-            delay: 0.3,
-          },
-          scale: {
-            duration: 1,
-            delay: 0.3,
-          },
-          y: {
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
+          opacity: { duration: 1, delay: 0.3 },
+          scale: { duration: 1, delay: 0.3 },
+          y: { duration: 4, repeat: Infinity },
         }}
         className="
           absolute
           z-40
 
-          top-[15%]
+          top-[10%]
+          right-[5%]
 
-          left-[65%]
+          sm:top-[12%]
+          sm:right-[8%]
 
-          sm:left-[62%]
-
-          lg:left-auto
+          lg:top-[15%]
           lg:right-[10%]
         "
       >
         <img
           src={card}
           className="
-            w-[65px]
-            sm:w-[90px]
-            md:w-[120px]
+            w-[55px]
+            sm:w-[85px]
+            md:w-[110px]
             lg:w-[210px]
           "
         />

@@ -102,7 +102,10 @@ export default function Projects() {
               Featured Projects
             </p>
 
-            <h2 className="text-4xl md:text-6xl font-semibold leading-[1.1]     text-[2.2rem]
+            <h2 className="text-4xl md:text-6xl 
+            font-medium
+              leading-[1.25]
+              text-[2.2rem]
           sm:text-[1.6rem]
           md:text-[1.9rem]
           lg:text-[1.9rem]">
