@@ -5,7 +5,7 @@ import {
   FaGithub,
   FaPhp,
 } from "react-icons/fa"
-import { motion, AnimatePresence } from "framer-motion"
+// import { motion, AnimatePresence } from "framer-motion"
 import {
   // SiNextdotjs,
   SiTypescript,
