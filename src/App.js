@@ -3,9 +3,8 @@ import { useEffect, useState } from "react"
 // import Cursor from "./components/UI/Cursor"
 // import ProgressBar from "./components/UI/ProgressBar"
 
-import Intro from "./components/Intro" // ✅ make sure path is correct
-
-import Lenis from "@studio-freight/lenis"
+import Intro from "./components/Intro"
+import Lenis from "lenis"
 import Home from "./pages/Home"
 import Footer from "./Footer"
 
