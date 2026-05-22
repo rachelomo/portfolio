@@ -1,24 +1,28 @@
-// import Lenis from "lenis"
-// import { useEffect } from "react"
+import { useEffect } from "react"
+import Lenis from "lenis"
 
-// const useSmoothScroll = () => {
-//   useEffect(() => {
-//     const lenis = new Lenis({
-//       duration: 1.2,
-//       smoothWheel: true,
-//     })
+const useSmoothScroll = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      lerp: 0.1,
+    })
 
-//     function raf(time) {
-//       lenis.raf(time)
-//       requestAnimationFrame(raf)
-//     }
+    let animationFrameId
 
-//     requestAnimationFrame(raf)
+    const raf = (time) => {
+      lenis.raf(time)
+      animationFrameId = requestAnimationFrame(raf)
+    }
 
-//     return () => {
-//       lenis.destroy()
-//     }
-//   }, [])
-// }
+    animationFrameId = requestAnimationFrame(raf)
 
-// export default useSmoothScroll
+    return () => {
+      cancelAnimationFrame(animationFrameId)
+      lenis.destroy()
+    }
+  }, [])
+}
+
+export default useSmoothScroll
