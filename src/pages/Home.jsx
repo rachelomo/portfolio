@@ -1,6 +1,6 @@
 import Navbar from "../components/home/Navbar"
 import Hero from "../components/home/Hero"
-import useSmoothScroll from "../hooks/useSmoothScroll"
+// import useSmoothScroll from "../hooks/useSmoothScroll"
 import About from "../sections/About/About"
 import Skills from "../sections/Projects/Skills/Skills"
 import Projects from "../sections/Projects/Projects"
@@ -9,7 +9,7 @@ import Lenis from "lenis"
 import Experience from "../sections/Experience/Experience"
 import Contact from "../sections/Contact/Contact"
 const Home = () => {
-   useSmoothScroll()
+  //  useSmoothScroll()
    useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
