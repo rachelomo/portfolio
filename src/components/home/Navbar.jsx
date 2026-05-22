@@ -66,18 +66,33 @@ const Navbar = () => {
           bg-black/20
         "
       >
-        <div className="max-w-7xl mx-auto px-6 py-3 h-20 flex items-center justify-between">
-        {/* LOGO */}
+<div className="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between overflow-visible">  
+{/* LOGO */}
 <h1
   onClick={() => scrollToSection("home")}
-  className="cursor-pointer flex items-center leading-none"
+  className="cursor-pointer relative flex items-center"
 >
-  <img
-    src="/logo.png"
-    alt="Rachael Logo"
-    className="h-26 md:h-28 w-auto object-contain block"
-  />
+  <div className="w-[140px] h-20 relative flex items-center">
+    <img
+      src="/logo.png"
+      alt="Rachael Logo"
+      className="
+        absolute
+        left-0
+        top-1/2
+        -translate-y-1/2
+        scale-[2.2]
+        w-auto
+        h-16
+        object-contain
+        origin-left
+        transition-transform duration-300
+        hover:scale-[2.3]
+      "
+    />
+  </div>
 </h1>
+
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-10 text-1xl">
             {navItems.map((item) => (
