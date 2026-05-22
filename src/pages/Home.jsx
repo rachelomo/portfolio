@@ -26,7 +26,9 @@ const Home = () => {
   return (
     <main className="relative min-h-screen bg-dark overflow-hidden">
       <Navbar className="bg-dark overflow-hidden"/>
-      <Hero/>
+      <section id="home">
+        <Hero />
+      </section>
          <section id="about">
             <About />
           </section>
