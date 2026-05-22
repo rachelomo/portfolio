@@ -24,7 +24,7 @@ const HeroRight = () => {
 
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+  }, [mouseX, mouseY])
 
   const planetX = useTransform(smoothX, [-0.5, 0.5], [-15, 15])
   const planetY = useTransform(smoothY, [-0.5, 0.5], [-15, 15])
@@ -167,6 +167,7 @@ const HeroRight = () => {
             md:w-[110px]
             lg:w-[210px]
           "
+          alt="Floating Card"
         />
       </motion.div>
     </div>
