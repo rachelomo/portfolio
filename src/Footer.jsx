@@ -45,7 +45,7 @@ const connect = [
 
 
 export default function Footer() {
-   const [isOpen, setIsOpen] = useState(false)
+const [setIsOpen] = useState(false)
 
    // SMOOTH SCROLL
   const scrollToSection = (id) => {
