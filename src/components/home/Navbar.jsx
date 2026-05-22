@@ -135,11 +135,11 @@ const Navbar = () => {
           </button>
 
           {/* MOBILE MENU BUTTON */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="relative w-8 h-8"
-            >
+         <div className="md:hidden flex items-center justify-end">
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="relative w-8 h-8 -translate-x-6"
+  >
               <span
                 className={`absolute w-full h-[2px] bg-white transition-all duration-300 ${
                   isOpen ? "rotate-45 top-3" : "top-1"
@@ -172,6 +172,8 @@ const Navbar = () => {
               fixed inset-0 z-40
               bg-[#050505]
               flex overflow-hidden
+              ml-[200px]
+             
             "
           >
             {/* BACKGROUND */}
