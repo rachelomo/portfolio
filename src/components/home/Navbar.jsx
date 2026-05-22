@@ -70,7 +70,7 @@ const Navbar = () => {
 {/* LOGO */}
 <h1
   onClick={() => scrollToSection("home")}
-  className="cursor-pointer relative flex items-center"
+ h1 className="cursor-pointer relative flex items-center -translate-x-6"
 >
   <div className="w-[140px] h-20 relative flex items-center">
     <img
