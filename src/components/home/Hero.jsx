@@ -131,6 +131,8 @@ export default function Hero() {
                 backdrop-blur-xl
                 text-[10px]
           sm:text-[11px]
+          text-[#D948F0]
+              
                 "
               >
                 FULL STACK DEVELOPER
@@ -144,12 +146,16 @@ export default function Hero() {
 
           
 
-              leading-[0.95]
- text-[2.7rem]
-          sm:text-[2rem]
-          md:text-[2.4rem]
-          lg:text-[2.4rem]
-              font-black
+     text-5xl
+            md:text-7xl
+            font-medium
+              leading-[1.25]
+            max-w-4xl
+              text-[2.2rem]
+          sm:text-[1.6rem]
+          md:text-[1.9rem]
+          lg:text-[1.9rem]
+              
               "
             >
               Building digital

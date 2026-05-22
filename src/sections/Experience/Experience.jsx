@@ -158,13 +158,15 @@ mx-auto
 
 <p
 className="
-text-sm
+text-xs 
+text-[10px] 
+sm:text-[11px]
 
 tracking-[0.25em]
 
 text-gray-400
 
-mb-12
+mb-3
 "
 >
 
@@ -315,8 +317,12 @@ mb-4
 <h3
 className="
 text-2xl
+ font-medium
 
-font-semibold
+            leading-[1.25]
+
+              text-[10px]
+          sm:text-[11px]
 "
 >
 
@@ -343,6 +349,10 @@ mt-6
 text-gray-300
 
 leading-8
+text-[12px]
+          sm:text-[13px]
+          lg:text-[14px]
+
 "
 >
 

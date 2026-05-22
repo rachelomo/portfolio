@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowUp } from "lucide-react"
 const navigation = [
@@ -44,6 +45,25 @@ const connect = [
 
 
 export default function Footer() {
+   const [isOpen, setIsOpen] = useState(false)
+
+   // SMOOTH SCROLL
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id)
+
+    if (section) {
+      const navbarHeight = 90
+      const sectionPosition = section.offsetTop - navbarHeight
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      })
+    }
+
+    setIsOpen(false)
+  }
+  
   return (
     <footer className="bg-[#04030B] text-white px-6 md:px-16 pt-16 pb-10 border-t border-[#1a1a2e] relative overflow-hidden">
       
@@ -53,12 +73,35 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
 
         {/* LEFT */}
-        <div>
-          <h2 className="text-xl font-bold tracking-[0.3em]">
-            RACHAEL.
-          </h2>
+        <div className="">
+          <h1
+  onClick={() => scrollToSection("home")}
+  className="cursor-pointer relative flex items-center"
+>
+             <div className="w-[140px] h-20 relative flex items-center">
+    <img
+      src="/logo.png"
+      alt="Rachael Logo"
+      className="
+        absolute
+        left-[-26px]
+        top-1/2
+        -translate-y-1/2
+        scale-[2.2]
+        w-auto
+        h-16
+        object-contain
+        origin-left
+        transition-transform duration-300
+        hover:scale-[2.3]
+       
+      "
+    />
+  </div>
+  </h1>
+   
 
-          <p className="text-gray-400 mt-4 text-sm leading-relaxed max-w-xs">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Building modern digital experiences with clean design,
             performance, and scalable frontend solutions.
           </p>

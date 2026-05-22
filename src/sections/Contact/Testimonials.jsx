@@ -160,8 +160,9 @@ z-10
 <motion.p
 variants={item}
 className="
-text-sm
-
+text-[10px]
+sm:text-[11px]
+text-xs
 tracking-[0.2em]
 
 text-gray-400
@@ -265,6 +266,15 @@ relative
 z-10
 
 max-w-[620px]
+
+            font-medium
+
+            leading-[1.25]
+
+             text-[2.2rem]
+          sm:text-[1.6rem]
+          md:text-[1.9rem]
+          lg:text-[1.9rem]
 "
 >
 

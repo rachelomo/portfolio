@@ -147,7 +147,7 @@ export default function CTA() {
             className="
             text-[10px]
             sm:text-[11px]
-
+text-xs
             tracking-[0.25em]
 
             text-[#8B7DB8]
@@ -169,9 +169,10 @@ export default function CTA() {
 
             leading-[1.25]
 
-            text-[2rem]
-            sm:text-[2.3rem]
-            lg:text-[2.7rem]
+             text-[2.2rem]
+          sm:text-[1.6rem]
+          md:text-[1.9rem]
+          lg:text-[1.9rem]
             "
           >
             Have a project in mind?
@@ -223,7 +224,7 @@ export default function CTA() {
             transition-all
 
             duration-300
-
+text-sm
             shadow-[0_0_40px_rgba(123,97,255,.45)]
             "
           >

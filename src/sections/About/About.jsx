@@ -23,7 +23,7 @@ const stats = [
   {
     number: 1000,
     suffix: "+",
-    label: "Hours of Coding",
+    label: "Hours Coding",
     icon: FaClock,
   },
   {
@@ -284,264 +284,341 @@ and see how I can bring your ideas to life. 😊
     </motion.div>
 </div>
 
- {/* CENTER IMAGE SECTION */}
-
-<motion.div
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  viewport={{ once: true }}
-  className="relative flex items-center justify-center"
->
-
-{/* BREATHING CINEMATIC ORB */}
-
-<motion.div
-  animate={{
-    scale: [1, 1.06, 1],
-    opacity: [0.75, 1, 0.75],
-  }}
-  transition={{
-    duration: 8,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className="
-    absolute
-    left-1/2
-    top-1/2
-
-    -translate-x-1/2
-    -translate-y-1/2
-
-    w-[700px]
-    h-[700px]
-
-    -z-10
-    pointer-events-none
-  "
->
-
-  {/* MAIN GLOW */}
-
-  <div
-    className="
-      absolute
-      inset-0
-
-      rounded-full
-
-      bg-[radial-gradient(circle,rgba(123,97,255,.35)_0%,rgba(123,97,255,.16)_30%,rgba(123,97,255,.05)_58%,transparent_80%)]
-
-      blur-[120px]
-    "
-  />
-
-  {/* LOWER PLANET */}
-
-  <div
-    className="
-      absolute
-
-      bottom-[15%]
-      right-[12%]
-
-      w-[240px]
-      h-[240px]
-
-      rounded-full
-
-      bg-[radial-gradient(circle,rgba(123,97,255,.6),rgba(123,97,255,.12),transparent)]
-
-      blur-[40px]
-    "
-  />
-
-</motion.div>
-
-{/* FLOAT LIGHT */}
-
-<motion.div
-  animate={{
-    y: [0, -16, 0],
-    scale: [1, 1.2, 1],
-  }}
-  transition={{
-    duration: 5,
-    repeat: Infinity,
-  }}
-  className="
-    absolute
-
-    top-[18%]
-    right-[18%]
-
-    w-[10px]
-    h-[10px]
-
-    rounded-full
-
-    bg-primary
-
-    shadow-[0_0_70px_rgba(123,97,255,.9)]
-  "
-/>
-
-{/* PARTICLES */}
-
-<motion.div
-  animate={{
-    y: [0, -14, 0],
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-  }}
-  className="
-    absolute
-    left-[18%]
-    bottom-[18%]
-
-    w-5
-    h-5
-
-    rounded-full
-
-    bg-primary/60
-
-    blur-md
-  "
-/>
-
-{/* IMAGE */}
-
-<div
-className="
-relative
-z-20
-"
->
-
-<div
-className="
-relative
-
-rounded-[40px]
-
-overflow-hidden
-
-border
-border-[#24193D]
-
-bg-[#090714]/90
-
-backdrop-blur-xl
-
-shadow-[0_0_120px_rgba(123,97,255,.16)]
-"
->
-
-<img
-src={picture}
-alt=""
-className="
-w-full
-h-[460px]
-
-object-cover
-
-scale-[1.02]
-
-hover:scale-[1.05]
-
-transition-transform
-duration-700
-"
-/>
-
-<div
-className="
-absolute
-inset-0
-
-bg-[radial-gradient(circle_at_top,rgba(123,97,255,.18),transparent_60%)]
-"
-/>
-
-<div
-className="
-absolute
-inset-0
-
-bg-gradient-to-t
-
-from-black/20
-via-transparent
-to-transparent
-"
-/>
-
-</div>
-
-</div>
-
-{/* EXPERIENCE CARD */}
-
-<motion.div
-animate={{
-y:[0,-12,0],
-}}
-
-transition={{
-duration:4,
-repeat:Infinity,
-}}
-
-className="
-absolute
-
-left-[-13px]
-bottom-10
-
-px-4
-py-14
-
-rounded-[28px]
-
-bg-[#0B0717]/95
-
-border
-border-[#2B1F4A]
-
-backdrop-blur-xl
-
-shadow-[0_0_60px_rgba(123,97,255,.18)]
-
-z-30
-
-flex
-flex-col
-items-center
-"
->
-
-<h3
-className="
-text-5xl
-font-bold
-text-primary
-"
->
-3+
-</h3>
-
-<p className="text-white/60 mt-2">
-Years Experience
-</p>
-
-</motion.div>
-
-</motion.div>
+          {/* CENTER IMAGE SECTION */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            viewport={{ once: true }}
+            className="relative flex items-center justify-center"
+          >
+            {/* GIANT CINEMATIC ORB */}
+
+            <div
+              className="
+                absolute
+                top-1/2
+                left-1/2
+                -translate-x-1/2
+                -translate-y-1/2
+
+                w-[700px]
+                h-[700px]
+
+                rounded-full
+
+                bg-purple-600/20
+
+                blur-[120px]
+
+                opacity-80
+              "
+            />
+
+            {/* INNER GLOW CORE */}
+
+            <motion.div
+              animate={{
+                scale: [1, 1.08, 1],
+                opacity: [0.5, 1, 0.5],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+              }}
+              className="
+                absolute
+                top-1/2
+                left-1/2
+                -translate-x-1/2
+                -translate-y-1/2
+
+                w-[350px]
+                h-[350px]
+
+                rounded-full
+
+                bg-primary/30
+
+                blur-[90px]
+              "
+            />
+
+            {/* ORBIT RING */}
+
+            <div
+              className="
+                absolute
+                top-1/2
+                left-1/2
+                -translate-x-1/2
+                -translate-y-1/2
+
+                w-[650px]
+                h-[650px]
+
+                rounded-full
+
+                border
+                border-primary/10
+              "
+            />
+
+            {/* ROTATING ORBIT */}
+
+            <motion.div
+              animate={{
+                rotate: 360,
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                absolute
+                inset-0
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <div
+                className="
+                  relative
+                  w-[650px]
+                  h-[650px]
+                "
+              >
+                <div
+                  className="
+                    absolute
+                    top-0
+                    left-1/2
+                    -translate-x-1/2
+
+                    w-4
+                    h-4
+
+                    rounded-full
+
+                    bg-primary
+
+                    shadow-[0_0_30px_#8b5cf6]
+                  "
+                />
+              </div>
+            </motion.div>
+
+            {/* FLOATING PARTICLES */}
+
+            <motion.div
+              animate={{
+                y: [0, -20, 0],
+                x: [0, 10, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+              }}
+              className="
+                absolute
+                top-10
+                right-16
+
+                w-5
+                h-5
+
+                rounded-full
+
+                bg-primary
+
+                blur-sm
+              "
+            />
+
+            <motion.div
+              animate={{
+                y: [0, 20, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+              }}
+              className="
+                absolute
+                bottom-20
+                left-10
+
+                w-8
+                h-8
+
+                rounded-full
+
+                border
+                border-primary/30
+              "
+            />
+
+            {/* OUTER FRAME */}
+
+            <div
+              className="
+              relative
+              p-[1px]
+              rounded-[40px]
+              bg-gradient-to-b
+              from-primary/40
+              to-transparent
+              z-10
+            
+            "
+            >
+              {/* IMAGE CARD */}
+
+              <div
+                className="
+                relative
+                rounded-[40px]
+                overflow-hidden
+                border
+                border-white/10
+                glass
+                bg-black/40
+
+                shadow-[0_0_80px_rgba(139,92,246,0.25)]
+              "
+              >
+                {/* IMAGE */}
+
+                <img
+                  src={picture}
+                  alt=""
+                  className="
+                    w-full
+                    h-[460px]
+                    object-cover
+
+                    scale-[1.02]
+                    hover:scale-[1.05]
+
+                    transition-transform
+                    duration-700
+                  "
+                />
+
+                {/* SPOTLIGHT */}
+
+                <div
+                  className="
+                  absolute
+                  inset-0
+                  bg-[radial-gradient(circle_at_top,rgba(139,92,246,0.25),transparent_60%)]
+                "
+                />
+
+                {/* DARK OVERLAY */}
+
+                <div
+                  className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-black/30
+                  via-transparent
+                  to-transparent
+                "
+                />
+              </div>
+            </div>
+
+            {/* EXPERIENCE FLOAT CARD */}
+
+            <motion.div
+              animate={{
+                y: [0, -12, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+              }}
+              className="
+                absolute
+                left-[-50px]
+                bottom-8
+
+                px-4
+                py-14
+                mx-6
+               
+                rounded-3xl
+
+                glass
+                border
+                border-primary/30
+
+                backdrop-blur-xl
+
+                shadow-[0_0_50px_rgba(139,92,246,0.35)]
+
+                z-20
+                flex 
+                items-center
+                flex-col
+              "
+            >
+              <h3 className="text-5xl font-bold text-primary ">
+                3+
+              </h3>
+
+              <p className="text-white/60 mt-2">
+                Years Experience
+              </p>
+            </motion.div>
+
+            {/* DECORATIVE RINGS */}
+
+            <div
+              className="
+              absolute
+              -top-10
+              -left-10
+
+              w-40
+              h-40
+
+              rounded-full
+
+              border
+              border-primary/20
+            "
+            />
+
+            <div
+              className="
+              absolute
+              bottom-[-20px]
+              right-[-20px]
+
+              w-72
+              h-72
+
+              rounded-full
+
+              border
+              border-primary/10
+            "
+            />
+          </motion.div>
 
           {/* RIGHT STATS */}
 
@@ -567,33 +644,23 @@ Years Experience
                   y: -10,
                   scale: 1.03,
                 }}
-             className="
-  relative
-  min-h-[190px]
+                className="
+                  relative
+                  min-h-[190px]
 
-  rounded-3xl
+                  rounded-3xl
 
-  border
-  border-white/10
+                  border
+                  border-white/10
 
-  bg-[#070711]
+                  glass
+                  p-4
 
-  backdrop-blur-xl
+                  overflow-hidden
 
-  p-4
-
-  overflow-hidden
-
-  transition-all
-  duration-500
-
-  hover:-translate-y-2
-  hover:border-violet-500/50
-
-  hover:shadow-[0_0_40px_rgba(139,92,246,0.18)]
-
-  group
-">
+                  group
+                "
+              >
                 {/* HOVER GLOW */}
 
                 <div
@@ -716,4 +783,4 @@ Years Experience
   )
 }
 
-export default About
+export default About 

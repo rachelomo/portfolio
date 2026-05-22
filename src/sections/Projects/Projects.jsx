@@ -97,15 +97,21 @@ export default function Projects() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <p className="uppercase tracking-[4px] text-gray-500 text-xs mb-4 text-[10px]
-          sm:text-[11px]">
+            <p className="uppercase mb-3 text-xs 
+text-[10px] 
+sm:text-[11px]
+
+tracking-[0.25em]
+ text-[#D948F0]">
               Featured Projects
             </p>
 
-            <h2 className="text-4xl md:text-6xl 
+            <h2 className="
             font-medium
-              leading-[1.25]
-              text-[2.2rem]
+
+            leading-[1.25]
+
+             text-[2.2rem]
           sm:text-[1.6rem]
           md:text-[1.9rem]
           lg:text-[1.9rem]">

@@ -116,7 +116,13 @@ export default function Skills() {
 
         {/* HEADER */}
         <motion.div variants={item} className="mb-10">
-          <h2 className="text-white uppercase tracking-[0.25em] text-sm font-medium">
+          <h2 className="uppercase font-medium text-xs 
+text-[10px] 
+sm:text-[11px]
+
+tracking-[0.25em]
+
+ text-[#D948F0]">
             My Expertise
           </h2>
         </motion.div>
