@@ -135,7 +135,7 @@ const Navbar = () => {
           </button>
 
           {/* MOBILE MENU BUTTON */}
-         <div className="md:hidden flex items-center justify-end">
+         <div className="md:hidden flex items-center justify-start">
   <button
     onClick={() => setIsOpen(!isOpen)}
     className="relative w-8 h-8 -translate-x-6"
@@ -172,7 +172,6 @@ const Navbar = () => {
               fixed inset-0 z-40
               bg-[#050505]
               flex overflow-hidden
-              ml-[200px]
              
             "
           >
