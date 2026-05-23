@@ -2,19 +2,27 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const testimonials = [
-{
-text:
-"Rachael delivered clean and responsive frontend components with strong attention to detail and user experience.",
-
-name:
-"Daniel Brooks",
-
-role:
-"Product Manager",
-
-image:
-"https://randomuser.me/api/portraits/men/32.jpg",
-},
+  {
+    text:
+      "Rachael delivered clean, responsive UI components and communicated effectively throughout the project.",
+    name: "Adebayo Tunde",
+    role: "Frontend Developer (Project Collaborator)",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+  {
+    text:
+      "She built well-structured frontend pages and paid strong attention to responsiveness and UI consistency.",
+    name: "Kemi Johnson",
+    role: "Product Designer",
+    image: "https://ui-avatars.com/api/?name=SKJ&background=7C3AED&color=fff&bold=true",
+  },
+  {
+    text:
+      "Great collaboration skills and solid understanding of modern React UI development.",
+    name: "John Olumide Adeyemi",
+    role: "Project Lead",
+    image: "https://ui-avatars.com/api/?name=JOA&background=8B5CF6&color=fff&bold=true",
+  },
 
 {
 text:
@@ -28,20 +36,6 @@ role:
 
 image:
 "https://randomuser.me/api/portraits/men/41.jpg",
-},
-
-{
-text:
-"Strong attention to UI details and collaboration. She adapted quickly to team workflows and project requirements.",
-
-name:
-"Emily Johnson",
-
-role:
-"Project Coordinator",
-
-image:
-"https://randomuser.me/api/portraits/women/65.jpg",
 },
 ]
 

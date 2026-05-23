@@ -15,7 +15,6 @@ import {
   SiLaravel,
   SiMysql,
   SiRedux,
-  SiFirebase,
   SiDocker,
   SiJavascript,
 } from "react-icons/si"
@@ -74,9 +73,8 @@ const moreSkills = [
   { name: "Laravel", icon: <SiLaravel />, color: "text-red-500" },
   { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
   { name: "Redux", icon: <SiRedux />, color: "text-purple-400" },
-  { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-400" },
   { name: "Docker", icon: <SiDocker />, color: "text-blue-400" },
-  { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-300" },
+  // { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-300" },
   { name: "GitHub", icon: <FaGithub />, color: "text-white" },
 ]
 

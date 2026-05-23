@@ -36,7 +36,7 @@ const projects = [
     title: "Med Housing Platform",
     type: "Full Stack",
     desc:  "A platform designed to provide personalized housing solutions for the medical community, worldwide.",
-    tech: ["Fronttend"],
+    tech: ["Frontend"],
     image:
       Medirent,
     demo: "https://medhousing-rep.vercel.app/",
@@ -131,7 +131,7 @@ tracking-[0.25em]
                 borderColor: "#8B5CF6",
               }}
               whileTap={{ scale: 0.97 }}
-              href="#"
+              href="#projects"
               className="mt-8 inline-flex items-center gap-3 border border-white/10 px-6 py-3 rounded-full text-sm bg-white/[0.03] backdrop-blur-md hover:bg-purple-500/10 transition-all duration-300"
             >
               View All Projects
