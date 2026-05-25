@@ -25,7 +25,7 @@ const projects = [
     {
     title: "Aremxyplug",
     type: "Frontend Contribution (Team Project)",
-    desc: "Contributed as a frontend developer to a collaborative project at Aremxyplug. Focused on building UI components, improving responsiveness, and integrating backend APIs.",
+    desc: "Contributed as a Frontend Developer to a collaborative web application project at Aremxyplug. Focused on building UI components, improving responsiveness, and integrating backend APIs.",
     tech: ["React", "Tailwind CSS"],
     image:
       aremxyImage,
