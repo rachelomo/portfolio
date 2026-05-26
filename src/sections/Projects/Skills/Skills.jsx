@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { VscVscode } from "react-icons/vsc";
 
 import {
   FaReact,
@@ -76,6 +77,7 @@ const moreSkills = [
   { name: "Docker", icon: <SiDocker />, color: "text-blue-400" },
   // { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-300" },
   { name: "GitHub", icon: <FaGithub />, color: "text-white" },
+  { name: "VS Code", icon: <VscVscode />, color: "text-white" },
 ]
 
 const container = {

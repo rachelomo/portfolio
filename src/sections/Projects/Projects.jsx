@@ -33,10 +33,10 @@ const projects = [
     code: "https://github.com/AremxyPlug-Business-Enterprises/aremxyplug-fe",
   },
   {
-    title: "Med Housing Platform",
+    title: "MedHouse Web Application",
     type: "Full Stack",
     desc:  "A platform designed to provide personalized housing solutions for the medical community, worldwide.",
-    tech: ["Frontend"],
+    tech: ["React.js", "Laravel", "MySQL", "REST APIs", "Tailwind CSS"],
     image:
       Medirent,
     demo: "https://medhousing-rep.vercel.app/",
@@ -53,7 +53,7 @@ const projects = [
     code: "https://github.com/rachelomo/Technologies",
   },
   {
-    title: "Portfolio System",
+    title: "Portfolio Website",
     type: "Frontend",
     desc: "Interactive modern portfolio with premium UI animations.",
     tech: ["React", "Framer Motion", "Tailwind Css"],
