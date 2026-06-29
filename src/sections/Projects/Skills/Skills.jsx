@@ -20,7 +20,6 @@ import {
   SiJavascript,
   SiPrisma,
   SiPostgresql,
-  SiNextdotjs,
   SiOpenai,
   SiJsonwebtokens,
 } from "react-icons/si"
@@ -78,10 +77,8 @@ const moreSkills = [
   { name: "PHP", icon: <FaPhp />, color: "text-indigo-400" },
   { name: "Laravel", icon: <SiLaravel />, color: "text-red-500" },
   { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
-     { name: "Next.js", icon: <SiNextdotjs />, color: "text-indigo-400" },
     { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-indigo-400" },
     { name: "Prisma", icon: <SiPrisma />, color: "text-indigo-400" },
-    { name: "NextAuth", icon: <SiNextdotjs/>, color: "text-indigo-400" },
   { name: "Redux", icon: <SiRedux />, color: "text-purple-400" },
   { name: "Docker", icon: <SiDocker />, color: "text-blue-400" },
   { name: "JWT", icon: <SiJsonwebtokens />, color: "text-yellow-300" },
