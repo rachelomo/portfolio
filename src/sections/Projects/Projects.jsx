@@ -2,7 +2,6 @@ import { useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import aremxyImage from "../../assets/home/aremxy.PNG"
 import Medirent from "../../assets/home/Medirent.PNG"
-import Technologies from "../../assets/home/Technologies.PNG"
 import {
   FiArrowRight,
   FiArrowLeft,
@@ -42,26 +41,26 @@ const projects = [
     demo: "https://medhousing-rep.vercel.app/",
     code: "https://github.com/rachelomo/medhouse_rep",
   },
-  {
-    title: "Technologies Platform",
-    type: "Full Stack",
-    desc:  "A platform empowering tech professionals with innovative tools for career growth and development.",
-    tech: ["React.js", "Tailwind CSS", "Laravel"],
-    image:
-      Technologies,
-    demo: "https://technologies-tau.vercel.app/",
-    code: "https://github.com/rachelomo/Technologies",
-  },
-  {
-    title: "Portfolio Website",
-    type: "Frontend",
-    desc: "Interactive modern portfolio with premium UI animations.",
-    tech: ["React", "Framer Motion", "Tailwind Css"],
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
-    demo: "https://rach-folio.vercel.app/",
-    code: "https://github.com/rachelomo/RachFolio",
-  },
+  // {
+  //   title: "Shopery Organic Website",
+  //   type: "Full Stack",
+  //   desc:  "Shopery Organic connects customers with organic products, offering a seamless, secure, and user-friendly shopping experience.",
+  //   tech: ["React.js", "Tailwind CSS", "Laravel"],
+  //   image:
+  //   Shopery,
+  //   demo: "https://shopery-org-web.vercel.app/",
+  //   code: "https://github.com/rachelomo/Shopery-Org.web",
+  // },
+  // {
+  //   title: "Cartiva ",
+  //   type: "Full-stack",
+  //   desc: "Cartiva is a full-stack e-commerce platform built with Next.js, React, JavaScript, Tailwind CSS, Prisma, and PostgreSQL, featuring authentication, product management, cart and checkout, payments, order tracking, notifications, and role-based admin controls.",
+  //   tech: ["Next.js", "React", "JavaScript", "Tailwind CSS", "Prisma ORM", "PostgreSQL", "NextAuth/Auth.js", "Stripe", "React Hook Form", "Lucide React", "Yup", "Vercel/Anything"],
+  //   image:
+  //     "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+  //   demo: "https://rach-folio.vercel.app/",
+  //   code: "https://github.com/rachelomo/Cartiva.git",
+  // },
 ]
 
 export default function Projects() {

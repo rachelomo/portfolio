@@ -22,6 +22,8 @@ import {
   SiPostgresql,
   SiOpenai,
   SiJsonwebtokens,
+  SiExpress,
+  SiNextdotjs,
 } from "react-icons/si"
 
 import { HiDotsHorizontal, HiX } from "react-icons/hi"
@@ -74,17 +76,20 @@ const expertiseData = [
 ]
 
 const moreSkills = [
-  { name: "PHP", icon: <FaPhp />, color: "text-indigo-400" },
+  { name: "Next.js", icon: <SiNextdotjs />, color: "text-indigo-400" },
+  { name: "PHP", icon: <FaPhp />, color: "text-red-500" },
   { name: "Laravel", icon: <SiLaravel />, color: "text-red-500" },
   { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
+  
     { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-indigo-400" },
+     { name: "ExpressJS", icon: <SiExpress />, color: "text-blue-500" },
     { name: "Prisma", icon: <SiPrisma />, color: "text-indigo-400" },
   { name: "Redux", icon: <SiRedux />, color: "text-purple-400" },
   { name: "Docker", icon: <SiDocker />, color: "text-blue-400" },
   { name: "JWT", icon: <SiJsonwebtokens />, color: "text-yellow-300" },
   { name: "GitHub", icon: <FaGithub />, color: "text-white" },
   { name: "VS Code", icon: <VscVscode />, color: "text-white" },
-   { name: "OpenAI API", icon: <SiOpenai/>, color: "text-indigo-400" },
+   { name: "AI Development", icon: <SiOpenai/>, color: "text-indigo-400" },
 ]
 
 const container = {
